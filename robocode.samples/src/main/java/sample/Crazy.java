@@ -35,6 +35,7 @@ public class Crazy extends AdvancedRobot {
 		setBulletColor(new Color(255, 255, 100));
 		setScanColor(new Color(255, 200, 200));
 
+
 		// Loop forever
 		while (true) {
 			// Queue a long-distance movement (40000 is effectively infinite)
