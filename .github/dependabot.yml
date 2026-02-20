@@ -1,0 +1,31 @@
+# Dependabot configuration file
+# See: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # Maintain dependencies for Gradle
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    # Group all dependencies into a single PR
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
+    # Ignore major version updates for now
+    ignore:
+      - dependency-name: "*"
+        update-types: [ "version-update:semver-major" ]
+      # Ignore net.sf.robocode dependencies (this is our own project artifact)
+      # The repository used to have .NET plugins with Maven projects that were
+      # removed in 2021. GitHub's security scanning still references these old paths.
+      - dependency-name: "net.sf.robocode:*"
+
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5

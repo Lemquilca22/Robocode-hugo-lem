@@ -1,0 +1,27 @@
+﻿VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+
+VERIFYING CHECKSUM CONTENT
+
+1. Download installer from:
+
+   https://sourceforge.net/projects/robocode/files/robocode/1.9.5.3/robocode-1.9.5.3-setup.jar
+
+2. You can use one of the following methods to obtain the SHA256 checksum:
+   - Using powershell function `Get-FileHash robocode-1.9.5.3-setup.jar`
+   - Using Chocolatey utility `checksum.exe robocode-1.9.5.3-setup.jar`
+   - Get-RemoteChecksum https://sourceforge.net/projects/robocode/files/robocode/1.9.5.3/robocode-1.9.5.3-setup.jar
+
+3. Verify that checksum is:
+
+   A59851B1111EBED2EFEF40EA1370DCD875F5C415931418560289E99979D0A022
+
+
+VERIFYING LICENCE
+
+File 'LICENSE.txt' is obtained from:
+   https://github.com/robo-code/robocode/blob/master/LICENSE.txt
+   https://robocode.sourceforge.io/license/epl-v10.html

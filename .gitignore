@@ -1,0 +1,6 @@
+.idea/
+*.class
+.gradle
+**/build/
+.sandbox
+robocode.tests/screenshots/
